@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import interiorImage from '../assets/bedroom.jpg'; // Correct path to your images
-import furnitureImage from '../assets/interior-design-blog-background-sm.jpg';
+import furnitureImage from '../assets/int.jpg';
 import renovationImage from '../assets/4872a53e70083aac16e5db7750a706a6.jpg';
 
 const ServicesSection = () => (
@@ -10,20 +10,10 @@ const ServicesSection = () => (
             <h2 className="text-center mb-5" style={{ fontFamily: "-moz-initial" }}>Our Services</h2>
             <Row>
                 <Col md={4} className="mb-4">
-                    <Card className="h-100 product-card" style={{ position: 'relative', overflow: 'hidden' }}>
-                        <Card.Img variant="top" src={interiorImage} />
-                        <Card.Body className="product-details" style={{ 
-                            position: 'absolute', 
-                            top: '50%', 
-                            left: '50%', 
-                            transform: 'translate(-50%, -50%)', 
-                            backgroundColor: 'rgba(0, 0, 0, 0.7)', 
-                            color: 'white', 
-                            padding: '20px', 
-                            opacity: 0, 
-                            transition: 'opacity 0.2s ease' 
-                        }}>
-                            <Card.Title className="text-center">Interior Design</Card.Title>
+                    <Card style={{ width: '18rem', backgroundImage: `url(${furnitureImage})`, backgroundSize: 'cover', color: 'red',height:"70vh" }}>
+                        <Card.Body>
+                            <Card.Title>Interior Design</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Interior Design</Card.Subtitle>
                             <Card.Text>
                                 From concept to execution, we create interior designs that reflect your style and enhance your living spaces.
                             </Card.Text>
@@ -31,20 +21,10 @@ const ServicesSection = () => (
                     </Card>
                 </Col>
                 <Col md={4} className="mb-4">
-                    <Card className="h-100 product-card" style={{ position: 'relative', overflow: 'hidden' }}>
-                        <Card.Img variant="top" src={furnitureImage} />
-                        <Card.Body className="product-details" style={{ 
-                            position: 'absolute', 
-                            top: '50%', 
-                            left: '50%', 
-                            transform: 'translate(-50%, -50%)', 
-                            backgroundColor: 'rgba(0, 0, 0, 0.7)', 
-                            color: 'white', 
-                            padding: '20px', 
-                            opacity: 0, 
-                            transition: 'opacity 0.3s ease' 
-                        }}>
-                            <Card.Title className="text-center">Furniture Design</Card.Title>
+                    <Card style={{ width: '18rem', backgroundImage: `url(${interiorImage})`, backgroundSize: 'cover', color: 'white',height:"70vh" }}>
+                        <Card.Body>
+                            <Card.Title>Furniture Design</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Furniture Design</Card.Subtitle>
                             <Card.Text>
                                 Crafting bespoke furniture pieces that are functional, durable, and aesthetically pleasing.
                             </Card.Text>
@@ -52,20 +32,10 @@ const ServicesSection = () => (
                     </Card>
                 </Col>
                 <Col md={4} className="mb-4">
-                    <Card className="h-100 product-card" style={{ position: 'relative', overflow: 'hidden' }}>
-                        <Card.Img variant="top" src={renovationImage} />
-                        <Card.Body className="product-details" style={{ 
-                            position: 'absolute', 
-                            top: '50%', 
-                            left: '50%', 
-                            transform: 'translate(-50%, -50%)', 
-                            backgroundColor: 'rgba(0, 0, 0, 0.7)', 
-                            color: 'white', 
-                            padding: '20px', 
-                            opacity: 0, 
-                            transition: 'opacity 0.3s ease' 
-                        }}>
-                            <Card.Title className="text-center">Home and Office</Card.Title>
+                    <Card style={{ width: '18rem', backgroundImage: `url(${renovationImage})`, backgroundSize: 'cover', color: 'white',height:"70vh" }}>
+                        <Card.Body>
+                            <Card.Title>Home and Office Renovation</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Renovation</Card.Subtitle>
                             <Card.Text>
                                 Choose us for innovative home renovation services and breathe new life into your home or office space.
                             </Card.Text>

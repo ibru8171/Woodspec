@@ -1,14 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logoImg from '../assets/logo.png';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
     const navLinkStyle = {
         color: 'white',
-        fontWeight: 'bold',
+        fontWeight: 'light',
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
         transition: 'color 0.3s ease',
+        margin: '0 15px',  // Add margin for space between links
+        cursor: 'pointer'  // Add cursor pointer for better UX
     };
 
     const navLinkHoverStyle = {
@@ -25,16 +28,25 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="navbarNav" />
                 <Navbar.Collapse id="navbarNav" className="justify-content-end">
                     <Nav>
-                        {['Home', 'About Us', 'Services', 'Projects', 'Contact'].map((text, index) => (
-                            <Nav.Link
-                                href={`#${text.toLowerCase().replace(' ', '')}`}
-                                key={index}
-                                style={navLinkStyle}
-                                onMouseEnter={e => e.currentTarget.style.color = navLinkHoverStyle.color}
-                                onMouseLeave={e => e.currentTarget.style.color = navLinkStyle.color}
-                            >
-                                {text}
-                            </Nav.Link>
+                        {['Home', 'About', 'Services', 'Projects', 'Contact us'].map((text, index) => (
+                            <Nav.Item key={index}>
+                                <ScrollLink
+                                    to={text.toLowerCase().replace(' ', '')}
+                                    smooth={true}
+                                    duration={500}
+                                    style={navLinkStyle}
+                                    onMouseEnter={e => {
+                                        e.currentTarget.style.color = navLinkHoverStyle.color;
+                                        e.currentTarget.style.textDecoration = navLinkHoverStyle.textDecoration;
+                                    }}
+                                    onMouseLeave={e => {
+                                        e.currentTarget.style.color = navLinkStyle.color;
+                                        e.currentTarget.style.textDecoration = 'none';
+                                    }}
+                                >
+                                    {text}
+                                </ScrollLink>
+                            </Nav.Item>
                         ))}
                     </Nav>
                 </Navbar.Collapse>
@@ -44,3 +56,4 @@ const Header = () => {
 };
 
 export default Header;
+
