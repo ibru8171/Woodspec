@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import aboutImage from '../assets/r-1.png'; // Assuming this is your main image
-import carouselImage1 from '../assets/bedroom.jpg'; // Import additional carousel images
-import carouselImage2 from '../assets/interior-design-blog-background-sm.jpg';
-import carouselImage3 from '../assets/homeBg.jpg';
-import carouselImage4 from '../assets/interior-design-living-room.jpg';
+import carouselImage1 from '../assets/r-4.png'; // Import additional carousel images
+import carouselImage2 from '../assets/thumb-1920-595107.jpg';
+import carouselImage3 from '../assets/r-6.png';
+import carouselImage4 from '../assets/wp1844398.webp';
 
 const AboutSection = () => (
     <section id="about" className="py-5">
         <Container>
-            <h2 className="text-center mb-5" style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#333', fontFamily: "-moz-initial" }}>
+            <h2 className="text-center mb-5" style={{ fontSize: '2.5rem', color: '#333', fontFamily: "-moz-initial" }}>
                 About Woodspec Interiors
             </h2>
             <Row className="align-items-center">

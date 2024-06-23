@@ -16,7 +16,6 @@ const Header = () => {
 
     const navLinkHoverStyle = {
         color: '#ff6347',
-        textDecoration: 'underline',
     };
 
     return (
@@ -28,7 +27,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="navbarNav" />
                 <Navbar.Collapse id="navbarNav" className="justify-content-end">
                     <Nav>
-                        {['Home', 'About', 'Services', 'Projects', 'Contact us'].map((text, index) => (
+                        {['Home', 'About', 'Services','Woodspec', 'Vision', 'Contact Us'].map((text, index) => (
                             <Nav.Item key={index}>
                                 <ScrollLink
                                     to={text.toLowerCase().replace(' ', '')}

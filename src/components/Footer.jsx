@@ -34,7 +34,7 @@ const Footer = () => {
                 height: '100%',
                 backgroundColor: 'rgba(0, 0, 0, 0.5)' // Adjust the transparency as needed
             }}></div>
-            <Container style={{ position: 'relative', zIndex: 1 }}>
+            <Container style={{ position: 'relative', zIndex: 1 }} id='contactus'>
                 <h2 className="text-center mb-5" style={{ fontFamily: "-moz-initial" }}>Contact Us</h2>
                 <Row>
                     <Col md={4} className="mb-4">
@@ -73,6 +73,9 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
+            <div className="text-center mt-4" style={{ fontSize: '14px' }}>
+                &copy; {new Date().getFullYear()} WoodSpec Project. All rights reserved.
+            </div>
         </footer>
     );
 };
