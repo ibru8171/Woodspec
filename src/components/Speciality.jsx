@@ -53,13 +53,11 @@ const SpecialtiesSection = () => {
               </div>
               <Card.Body style={textContainerStyle}>
                 <BsFillAwardFill style={{ fontSize: '3rem', marginBottom: '1rem', color: '#f39c12' }} />
-                <Card.Title style={{ fontFamily: 'sans-serif', fontWeight: 'bold' }}>Award-Winning Designs</Card.Title>
+                <Card.Title style={{ fontFamily: 'sans-serif', fontWeight: 'bold' }}>Innovative Solutions</Card.Title>
                 <Card.Text style={{ fontFamily: '-moz-initial' }}>
-                  Our award-winning designs are a testament to our commitment to excellence and innovation in the industry.
-                  We specialize in creating bespoke spaces that not only meet but exceed our clients' expectations.
-                  Through meticulous attention to detail and creative vision, we transform ideas into stunning realities.
-                  Whether it's modern aesthetics, sustainable practices, or timeless elegance, our designs consistently stand out,
-                  earning recognition for their ingenuity and craftsmanship.
+                  Our innovative solutions are designed to tackle the most complex challenges with creativity and precision.
+                  We leverage cutting-edge technology and forward-thinking strategies to deliver results that drive progress and make a lasting impact.
+                  Whether it's developing new products, improving processes, or enhancing user experiences, our solutions are tailored to meet the unique needs of our clients and the evolving market landscape.
                 </Card.Text>
               </Card.Body>
             </Card>

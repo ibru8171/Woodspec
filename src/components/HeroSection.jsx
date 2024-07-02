@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import backgroundImage from '../assets/homeBg.jpg';
+import backgroundImage from '../assets/Dark-living-room-scheme.jpg';
 
 const HeroSection = () => (
     <div

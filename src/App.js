@@ -17,8 +17,9 @@ const App = () => (
         <AboutSection />
         <ServicesSection />
         <ProjectsSection />
-        <SpecialtiesSection />
+        
         <ServicesPage />
+        <SpecialtiesSection />
         <TestimonialsSection />
 
 
