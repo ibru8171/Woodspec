@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.df3ad836.js",
+    "static/js/453.9e6667c8.chunk.js": "/static/js/453.9e6667c8.chunk.js",
+    "static/media/int.jpg": "/static/media/int.e4b4bc9f73c6f3ed9372.jpg",
+    "static/media/bedroom.jpg": "/static/media/bedroom.0e177ec5c119907b3793.jpg",
+    "static/media/jpg": "/static/media/4872a53e70083aac16e5db7750a706a6.2ef4403e50132a27307f.jpg",
+    "static/media/thumb-1920-595107.jpg": "/static/media/thumb-1920-595107.4c14032141300c9fd692.jpg",
+    "static/media/wp1844398.webp": "/static/media/wp1844398.cd96cb3566d5a51b3c12.webp",
+    "static/media/r-4.png": "/static/media/r-4.d08fd804fe6f11f76fda.png",
+    "static/media/r-1.png": "/static/media/r-1.53b793d8b6b646fe9ae0.png",
+    "static/media/r-6.png": "/static/media/r-6.1a5720889994f55b633c.png",
+    "static/media/Dark-living-room-scheme.jpg": "/static/media/Dark-living-room-scheme.ca9461d5ef7204b959d9.jpg",
+    "static/media/WOODSPEC png.png": "/static/media/WOODSPEC png.3f2882022c28ac77f709.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.df3ad836.js.map": "/static/js/main.df3ad836.js.map",
+    "453.9e6667c8.chunk.js.map": "/static/js/453.9e6667c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.df3ad836.js"
+  ]
+}
