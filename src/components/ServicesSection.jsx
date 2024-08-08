@@ -49,17 +49,14 @@ const ServicesSection = () => {
                 <Row>
                     {[{
                         title: "Interior Design",
-                        subtitle: "Interior Design",
-                        text: "From concept to execution, we create interior designs that reflect your style and enhance your living spaces.",
+                        text:  "From concept to execution, we create interior designs that reflect your style and enhance your living spaces.",
                         image: furnitureImage
                     }, {
                         title: "Furniture Design",
-                        subtitle: "Furniture Design",
                         text: "Crafting bespoke furniture pieces that are functional, durable, and aesthetically pleasing.",
                         image: interiorImage
                     }, {
                         title: "Home and Office Renovation",
-                        subtitle: "Renovation",
                         text: "Choose us for innovative home renovation services and breathe new life into your home or office space.",
                         image: renovationImage
                     }].map((service, index) => (

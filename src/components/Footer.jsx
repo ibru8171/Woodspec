@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
-    const whatsappNumber = '+919744118272';
+    const whatsappNumber = '+919544430754';
     const message = encodeURIComponent('Hello! I am interested in your interior design services.');
 
     const openWhatsApp = () => {
@@ -43,17 +43,18 @@ const Footer = () => {
                     </Col>
                     <Col md={4} className="mb-4">
                         <h5>Email Us</h5>
-                        <p>woodspecprolink@gmail.com</p>
+                        <a href="mailto:info@woodspecproject.com" className='text-white'>info@woodspecproject.com</a>
+                        <br /><br />
                         <h5>Call Us</h5>
                         <p>+91 9544430756 , +91 9544430754</p>
                     </Col>
                     <Col md={4} className="mb-4">
-                        <h4 style={{ color: 'white', fontSize: '1.5rem', marginBottom: '20px' }}>Connect with Us</h4>
+                        <h4 style={{ color: 'white', fontSize: '1.5rem', marginBottom: '20px' , fontFamily:"inherit"}}>Connect with Us</h4>
                         <div className="social-icons">
-                            <a href="https://www.facebook.com/share/dQabETGMX7fwsxJF/?mibextid=qi2Omg" className="social-icon me-2 ms-5 text-white">
+                            <a href="https://www.facebook.com/profile.php?id=61564078615806&mibextid=ZbWKwL" className="social-icon me-2 ms-5 text-white">
                                 <i className="fab fa-facebook fa-lg"></i>
                             </a>
-                            <a href="#" className="social-icon me-2 text-white">
+                            <a href="https://youtube.com/@woodspecpro?si=_1whiGf4wC6T_ld2" className="social-icon me-3 ms-2 text-white">
                             <i className="fa-brands fa-youtube"></i>
                             </a>
                             <a href="https://www.instagram.com/woodspec_project?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="social-icon text-white">
