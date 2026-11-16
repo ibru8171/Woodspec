@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Woodspec Interiors website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website for **Woodspec Project Link / Woodspec Interiors**, an interior design studio in Aluva, Kochi: www.woodspecproject.com
 
-## Available Scripts
+Built with React 19, Vite 8, Tailwind CSS 4 and Framer Motion. The page is pre-rendered to HTML at build time, so it loads fast and search engines see all the content.
 
-In the project directory, you can run:
+## Run it
 
-### `npm start`
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production build in dist/ (client + pre-render)
+npm run preview   # serve the production build at http://localhost:4173
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Node 22 is expected (`engines` in package.json).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Edit content
 
-### `npm test`
+All text, phone numbers, address, social links, services, offers, gallery and testimonials live in **`src/data/site.js`**. Components never hard-code copy.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Add or replace photos
 
-### `npm run build`
+1. Put the original photo somewhere outside `src/` (e.g. a `photos/` folder).
+2. Add it to the `PHOTOS` list in `scripts/optimize-images.py` with a short name, e.g. `"g-terrace": ("terrace.jpg", GALLERY, None)`.
+3. Run `python scripts/optimize-images.py photos` (needs Pillow). It writes web-sized WebP files into `src/assets/img/`.
+4. Use it in `src/data/site.js`: `photo("g-terrace", "Describe the photo for screen readers")`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`photo()` picks up every size automatically and builds the `srcset`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The original logo files are in `brand/`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Structure
 
-### `npm run eject`
+```
+src/
+  data/site.js          all content
+  components/           one file per section (Hero, About, Services, Gallery, Offer, Vision, Testimonials, Contact, Footer)
+  components/ui.jsx     shared pieces: Reveal, SplitHeading, SectionHeading, Img, Logo, brand icons
+  index.css             design tokens (colours, fonts) and hero CSS animations
+  entry-server.jsx      used by scripts/prerender.js at build time
+scripts/
+  optimize-images.py    turns original photos into responsive WebP files
+  prerender.js          writes the rendered page into dist/index.html, inlines CSS, preloads hero image and fonts
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deploy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Vercel project `woodspecproject` serves www.woodspecproject.com. `vercel.json` sets the framework to Vite.
