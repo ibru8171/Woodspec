@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
-=======
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
->>>>>>> master
+Allow: /
+
+Sitemap: https://www.woodspecproject.com/sitemap.xml
